@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard | CodeScope</title>
+    <link rel="icon" href="static/img/logo-2.png" type="image/icon type">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/nav.css">
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+</head>
+
+<body>
+
+<div id="nav">
+    <div id="icon">
+        <img src="static/img/logo-1.png" id="nav-icon" alt="logo">
+        <a class="nav-button" href="index.html" style="margin-left: 2px; font-size: 24px">CodeScope</a>
+    </div>
+    <div>
+        <a class="nav-button" href="index.html#home"><i class="layui-icon layui-icon-home"></i>&nbsp;Home</a>
+        <a class="nav-button" href="leaderboard.html"><i class="layui-icon layui-icon-template-1"></i>&nbsp;Leaderboard</a>
+        <a class="nav-button" href="https://huggingface.co/datasets/WeixiangYan/CodeTransOcean" target="_blank"><i class="layui-icon layui-icon-code-circle"></i>&nbsp;Data</a>
+        <a class="nav-button" href="https://arxiv.org/pdf/2310.04951.pdf" target="_blank"><i class="layui-icon layui-icon-file-b"></i>&nbsp;Paper</a>
+        <a class="nav-button" href="https://github.com/WeixiangYAN/LLMCodeEval" target="_blank"><i class="layui-icon layui-icon-github"></i>&nbsp;Github</a>
+        <a class="nav-button" href="index.html#submission"><i class="layui-icon layui-icon-upload-drag"></i>&nbsp;Submission</a>
+        <a class="nav-button" href="index.html#contact"><i class="layui-icon layui-icon-email"></i>&nbsp;Contact Us</a>
+    </div>
+</div>
+
+<div id="body">
+    <br><br><br><br><br>
+
+    <div class="section" id="code-understanding">
+        <h1>Code Understanding</h1>
+    </div>
+
+    <div class="section" id="code-summarization">
+        <h2>Code Summarization</h2>
+        <br>
+        <table class="layui-table" lay-options="{url:'static/json/code_summarization.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'BLEU', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-options="{field:'METEOR', minWidth:110, sort:true, align:'center'}">METEOR</th>
+                <th lay-options="{field:'ROUGE', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-options="{field:'BERTScore', minWidth:120, sort:true, align:'center'}">BERTScore</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="section" id="code-smell">
+        <h2>Code Smell</h2>
+        <br>
+        <table class="layui-table" lay-data="{url:'static/json/code_smell.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}" rowspan="2">Model</th>
+                <th lay-data="{align:'center'}" colspan="4">Java</th>
+                <th lay-data="{align:'center'}" colspan="4">C#</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'Java Accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'Java Precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'Java Recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'Java F1-score', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'C# Accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'C# Precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'C# Recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'C# F1-score', minWidth:110, sort:true, align:'center'}">F1-score</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="section" id="code-review">
+        <h2>Code Review</h2>
+        <br>
+        <table class="layui-table" lay-options="{url:'static/json/code_review.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'Accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-options="{field:'Precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-options="{field:'Recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-options="{field:'F1-score', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-options="{field:'BLEU', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-options="{field:'ROUGE', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-options="{field:'BERTScore', minWidth:120, sort:true, align:'center'}">BERTScore</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="section" id="automated-testing">
+        <h2>Automated Testing</h2>
+        <br>
+        <table class="layui-table" lay-data="{url:'static/json/automated_testing.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}" rowspan="2">Model</th>
+                <th lay-data="{align:'center'}" colspan="3">Python</th>
+                <th lay-data="{align:'center'}" colspan="3">Java</th>
+                <th lay-data="{align:'center'}" colspan="3">C</th>
+                <th lay-data="{align:'center'}" colspan="3">C++</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'Python PR', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'Python LC', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'Python BC', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'Java PR', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'Java LC', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'Java BC', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'C PR', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'C LC', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'C BC', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'C++ PR', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'C++ LC', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'C++ BC', minWidth:80, sort:true, align:'center'}">BC</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="section" id="code-generation">
+        <h1>Code Generation</h1>
+    </div>
+
+    <div class="section" id="program-synthesis">
+        <h2>Program Synthesis</h2>
+        <br>
+        <table class="layui-table" lay-options="{url:'static/json/program_synthesis.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'Easy', minWidth:100, sort:true, align:'center'}">Easy</th>
+                <th lay-options="{field:'Hard', minWidth:100, sort:true, align:'center'}">Hard</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="section" id="code-translation">
+        <h2>Code Translation</h2>
+        <br>
+        <table class="layui-table" lay-options="{url:'static/json/code_translation.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'Easy', minWidth:100, sort:true, align:'center'}">Easy</th>
+                <th lay-options="{field:'Hard', minWidth:100, sort:true, align:'center'}">Hard</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="section" id="code-repair">
+        <h2>Code Repair</h2>
+        <br>
+        <table class="layui-table" lay-options="{url:'static/json/code_repair.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'Easy', minWidth:100, sort:true, align:'center'}">Easy</th>
+                <th lay-options="{field:'Hard', minWidth:100, sort:true, align:'center'}">Hard</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="section" id="code-optimization">
+        <h2>Code Optimization</h2>
+        <br>
+        <table class="layui-table" lay-data="{url:'static/json/code_optimization.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'Model', minWidth:120, align:'center'}" rowspan="2">Model</th>
+                <th lay-data="{align:'center'}" colspan="2">Python</th>
+                <th lay-data="{align:'center'}" colspan="2">C</th>
+                <th lay-data="{align:'center'}" colspan="2">C++</th>
+                <th lay-data="{align:'center'}" colspan="2">C#</th>
+                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'Python Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'Python Time', minWidth:80, sort:true, align:'center'}">Time</th>
+                <th lay-data="{field:'C Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'C Time', minWidth:80, sort:true, align:'center'}">Time</th>
+                <th lay-data="{field:'C++ Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'C++ Time', minWidth:80, sort:true, align:'center'}">Time</th>
+                <th lay-data="{field:'C# Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'C# Time', minWidth:80, sort:true, align:'center'}">Time</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <br><br><br><br><br>
+</div>
+
+<script src="static/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.util.fixbar({
+        bgcolor: "var(--layui-cyan)",
+        css: {right: 50, bottom: 100},
+        showHeight: 100
+    });
+</script>
+
+</body>
+
+</html>

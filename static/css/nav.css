@@ -1,0 +1,42 @@
+#nav {
+    width: 96%;
+    height: var(--nav-height);
+    background-color: var(--layui-cyan);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    opacity: 80%;
+}
+
+#icon {
+    font-size: 1.5em;
+    font-family: var(--nav-font);
+    font-weight: 700;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button {
+    margin-left: 20px;
+    font-family: var(--nav-font);
+    color: #eeeeee;
+}
+
+.nav-button:hover {
+    color: var(--layui-orange);
+}
+
+.ignore {
+    color: var(--layui-red);
+}
+
+#nav-icon {
+    width: 2em;
+    margin: 5px;
+}

@@ -1,0 +1,190 @@
+:root {
+    --nav-font: Arial, Helvetica, sans-serif;
+    --nav-height: 6vh;
+    --layui-cyan: #16baaa;
+    --layui-green: #16b777;
+    --layui-red: #ff5722;
+    --layui-orange: #ffb800;
+    --layui-purple: #a233c6;
+    --body-font: #212529;
+}
+
+html {
+    overflow-x: hidden;
+    font-family: var(--nav-font);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 110%;
+    color: var(--body-font);
+}
+
+h1 {
+    color: var(--layui-cyan);
+}
+
+p {
+    line-height: 150%;
+    font-size: 18px;
+    text-align: justify;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:focus, a:hover {
+    color: var(--layui-orange) !important;
+    text-decoration: underline;
+}
+
+a.hover {
+    text-decoration: none;
+}
+
+a.hover:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 75%;
+    color: silver;
+    opacity: 0.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+ol {
+    margin: 0;
+}
+
+li {
+    margin-top: 12px;
+    font-size: 18px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#body {
+    width: 60vw;
+    margin: auto;
+}
+
+.section {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 4px;
+}
+
+#title {
+    margin-top: var(--nav-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(36vh - var(--nav-height));
+    width: 100vw;
+    left: 0;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, var(--layui-purple), var(--layui-cyan), var(--layui-orange))
+}
+
+#title-icon {
+    width: 6.5em;
+    margin: 20px;
+}
+
+#title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-text {
+    font-size: 44px;
+    color: var(--layui-orange);
+}
+
+#subtitle-text {
+    font-size: 28px;
+    text-align: center;
+    line-height: 125%;
+    margin: -0.5em;
+}
+
+#title-padding-bottom {
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+    #body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .section {
+        width: 98%;
+        padding: 2.5%;
+    }
+}
+
+.citation-container {
+    position: relative;
+}
+
+.citation-box {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+#citation-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    padding: 0.5em 1em;
+    background-color: var(--layui-cyan);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#citation-btn:hover {
+    background-color: var(--layui-orange);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.ext-link {
+    color: var(--layui-green);
+}
+
+.layui-table-header, thead tr {
+    background-color: #F8FCF9;
+}
+
+.layui-table-view .layui-table {
+    width: 100% !important;
+}
+
+.layui-table th {
+    text-align: -webkit-center !important;
+}

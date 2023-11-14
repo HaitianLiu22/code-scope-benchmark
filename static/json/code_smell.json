@@ -1,0 +1,101 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "Model": "WizardCoder",
+      "Java Accuracy": "24.00",
+      "Java Precision": "20.64",
+      "Java Recall": "24.00",
+      "Java F1-score": "21.87",
+      "C# Accuracy": "65.00",
+      "C# Precision": "82.55",
+      "C# Recall": "65.00",
+      "C# F1-score": "72.44",
+      "Overall": "46.94"
+    },
+    {
+      "Model": "LLaMA 2",
+      "Java Accuracy": "25.00",
+      "Java Precision": "33.75",
+      "Java Recall": "25.00",
+      "Java F1-score": "24.57",
+      "C# Accuracy": "41.00",
+      "C# Precision": "64.86",
+      "C# Recall": "41.00",
+      "C# F1-score": "50.17",
+      "Overall": "38.17"
+    },
+    {
+      "Model": "GPT-3.5",
+      "Java Accuracy": "32.00",
+      "Java Precision": "24.85",
+      "Java Recall": "32.00",
+      "Java F1-score": "25.11",
+      "C# Accuracy": "30.00",
+      "C# Precision": "86.25",
+      "C# Recall": "30.00",
+      "C# F1-score": "34.18",
+      "Overall": "36.80"
+    },
+    {
+      "Model": "Vicuna",
+      "Java Accuracy": "15.00",
+      "Java Precision": "19.27",
+      "Java Recall": "15.00",
+      "Java F1-score": "14.07",
+      "C# Accuracy": "47.00",
+      "C# Precision": "75.27",
+      "C# Recall": "47.00",
+      "C# F1-score": "57.04",
+      "Overall": "36.21"
+    },
+    {
+      "Model": "Code LLaMA",
+      "Java Accuracy": "21.00",
+      "Java Precision": "33.37",
+      "Java Recall": "21.00",
+      "Java F1-score": "25.38",
+      "C# Accuracy": "35.00",
+      "C# Precision": "78.30",
+      "C# Recall": "35.00",
+      "C# F1-score": "38.22",
+      "Overall": "35.91"
+    },
+    {
+      "Model": "PaLM 2",
+      "Java Accuracy": "30.00",
+      "Java Precision": "38.31",
+      "Java Recall": "30.00",
+      "Java F1-score": "26.29",
+      "C# Accuracy": "41.00",
+      "C# Precision": "32.03",
+      "C# Recall": "41.00",
+      "C# F1-score": "35.96",
+      "Overall": "34.32"
+    },
+    {
+      "Model": "GPT-4",
+      "Java Accuracy": "27.00",
+      "Java Precision": "25.29",
+      "Java Recall": "27.00",
+      "Java F1-score": "22.00",
+      "C# Accuracy": "34.00",
+      "C# Precision": "57.16",
+      "C# Recall": "34.00",
+      "C# F1-score": "41.83",
+      "Overall": "33.53"
+    },
+    {
+      "Model": "StarCoder",
+      "Java Accuracy": "1.00",
+      "Java Precision": "6.25",
+      "Java Recall": "1.00",
+      "Java F1-score": "1.72",
+      "C# Accuracy": "49.00",
+      "C# Precision": "74.74",
+      "C# Recall": "49.00",
+      "C# F1-score": "34.61",
+      "Overall": "27.16"
+    }
+  ]
+}
