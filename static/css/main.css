@@ -93,7 +93,7 @@ li {
     width: 100vw;
     left: 0;
     font-weight: bold;
-    color: white;
+    color: #eeeeee;
     background: linear-gradient(135deg, var(--layui-purple), var(--layui-cyan), var(--layui-orange))
 }
 
@@ -111,7 +111,7 @@ li {
 
 #title-text {
     font-size: 44px;
-    color: var(--layui-orange);
+    color: #eeeeee;
 }
 
 #subtitle-text {
