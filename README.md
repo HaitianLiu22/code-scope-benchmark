@@ -18,7 +18,8 @@ Wen Wang<sup>5</sup>, Tingyu Lin<sup>6</sup>, Weishan Zhao<sup>7</sup>, Li Zhu<s
 
 <p align="center">
     📃 <a href="" target="_blank">Paper</a> | 
-    🌐 <a href="" target="_blank">Website</a> | 
+    🌐 <a href="https://haitianliu22.github.io/code-scope-benchmark/" target="_blank">Website</a> | 
     🤗 <a href="" target="_blank">HuggingFace</a> | 
+    💫 <a href="https://github.com/WeixiangYAN/CodeScope" target="_blank">GitHub</a> | 
     💭 <a href="" target="_blank">Google Drive</a>
 </p>
