@@ -12,8 +12,8 @@ Wen Wang<sup>5</sup>, Tingyu Lin<sup>6</sup>, Weishan Zhao<sup>7</sup>, Li Zhu<s
 <sup>7</sup>University of Chinese Academy of Sciences<br>
 <sup>∗</sup>Equal contribution<br>
 
-<p align="center" width="80%">
-<img src="static/img/logo-2.png" style="width: 40%; min-width: 300px; display: block; margin: auto;" alt="CodeScope">
+<p align="center">
+<img src="assets/banner.png" alt="CodeScope">
 </p>
 
 <p align="center">
