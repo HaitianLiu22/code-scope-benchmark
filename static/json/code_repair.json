@@ -4,50 +4,50 @@
     {
       "Model": "GPT-4",
       "Easy": "43.67",
-      "Hard": "14.86",
-      "Overall": "29.27"
+      "Hard": "14.12",
+      "Overall": "30.15"
     },
     {
       "Model": "GPT-3.5",
       "Easy": "18.61",
-      "Hard": "8.05",
-      "Overall": "13.33"
+      "Hard": "7.65",
+      "Overall": "13.59"
     },
     {
       "Model": "PaLM 2",
       "Easy": "7.44",
-      "Hard": "7.43",
-      "Overall": "7.44"
+      "Hard": "7.06",
+      "Overall": "7.27"
     },
     {
       "Model": "WizardCoder",
       "Easy": "4.96",
-      "Hard": "5.88",
-      "Overall": "5.42"
+      "Hard": "5.59",
+      "Overall": "5.25"
     },
     {
       "Model": "Code LLaMA",
       "Easy": "4.22",
-      "Hard": "3.72",
-      "Overall": "3.97"
-    },
-    {
-      "Model": "StarCoder",
-      "Easy": "2.23",
-      "Hard": "3.72",
-      "Overall": "2.98"
+      "Hard": "3.53",
+      "Overall": "3.90"
     },
     {
       "Model": "Vicuna",
       "Easy": "3.47",
-      "Hard": "2.48",
-      "Overall": "2.98"
+      "Hard": "2.35",
+      "Overall": "2.96"
+    },
+    {
+      "Model": "StarCoder",
+      "Easy": "2.23",
+      "Hard": "3.53",
+      "Overall": "2.83"
     },
     {
       "Model": "LLaMA 2",
       "Easy": "1.49",
-      "Hard": "1.55",
-      "Overall": "1.52"
+      "Hard": "1.47",
+      "Overall": "1.48"
     }
   ]
 }

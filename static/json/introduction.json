@@ -53,7 +53,7 @@
       "Category": "Generation",
       "Task": "Code Repair",
       "#Languages": "14",
-      "#Test Samples": "726",
+      "#Test Samples": "743",
       "Avg. #Tokens/Sample": "447",
       "Detail": "leaderboard.html#code-repair"
     },

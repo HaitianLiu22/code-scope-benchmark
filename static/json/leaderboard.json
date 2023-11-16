@@ -7,8 +7,8 @@
       "Organization": "OpenAI",
       "Link": "https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo",
       "LLMCodeEval (Understanding)": "46.93",
-      "LLMCodeEval (Generation)": "31.01",
-      "LLMCodeEval (Overall)": "38.97"
+      "LLMCodeEval (Generation)": "31.23",
+      "LLMCodeEval (Overall)": "39.08"
     },
     {
       "Ranking": "2",
@@ -16,8 +16,8 @@
       "Organization": "OpenAI",
       "Link": "https://platform.openai.com/docs/models/gpt-3-5",
       "LLMCodeEval (Understanding)": "49.20",
-      "LLMCodeEval (Generation)": "20.82",
-      "LLMCodeEval (Overall)": "35.01"
+      "LLMCodeEval (Generation)": "20.89",
+      "LLMCodeEval (Overall)": "35.05"
     },
     {
       "Ranking": "3",
@@ -25,8 +25,8 @@
       "Organization": "Microsoft",
       "Link": "https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder",
       "LLMCodeEval (Understanding)": "50.00",
-      "LLMCodeEval (Generation)": "9.74",
-      "LLMCodeEval (Overall)": "29.87"
+      "LLMCodeEval (Generation)": "9.70",
+      "LLMCodeEval (Overall)": "29.85"
     },
     {
       "Ranking": "4",
@@ -34,8 +34,8 @@
       "Organization": "Meta",
       "Link": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
       "LLMCodeEval (Understanding)": "47.99",
-      "LLMCodeEval (Generation)": "8.02",
-      "LLMCodeEval (Overall)": "28.01"
+      "LLMCodeEval (Generation)": "8.00",
+      "LLMCodeEval (Overall)": "28.00"
     },
     {
       "Ranking": "5",
@@ -43,8 +43,8 @@
       "Organization": "Google",
       "Link": "https://ai.google/discover/palm2",
       "LLMCodeEval (Understanding)": "47.28",
-      "LLMCodeEval (Generation)": "5.59",
-      "LLMCodeEval (Overall)": "26.44"
+      "LLMCodeEval (Generation)": "5.55",
+      "LLMCodeEval (Overall)": "26.42"
     },
     {
       "Ranking": "6",
@@ -52,8 +52,8 @@
       "Organization": "Meta",
       "Link": "https://ai.meta.com/llama/",
       "LLMCodeEval (Understanding)": "48.51",
-      "LLMCodeEval (Generation)": "2.50",
-      "LLMCodeEval (Overall)": "25.51"
+      "LLMCodeEval (Generation)": "2.49",
+      "LLMCodeEval (Overall)": "25.50"
     },
     {
       "Ranking": "7",
@@ -61,7 +61,7 @@
       "Organization": "Vicuna Team",
       "Link": "https://lmsys.org/blog/2023-03-30-vicuna/",
       "LLMCodeEval (Understanding)": "46.54",
-      "LLMCodeEval (Generation)": "2.60",
+      "LLMCodeEval (Generation)": "2.59",
       "LLMCodeEval (Overall)": "24.57"
     },
     {
@@ -70,8 +70,8 @@
       "Organization": "BigCode",
       "Link": "https://github.com/bigcode-project/starcoder",
       "LLMCodeEval (Understanding)": "44.04",
-      "LLMCodeEval (Generation)": "3.90",
-      "LLMCodeEval (Overall)": "23.97"
+      "LLMCodeEval (Generation)": "3.86",
+      "LLMCodeEval (Overall)": "23.95"
     }
   ]
 }
