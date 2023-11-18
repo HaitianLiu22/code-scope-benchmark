@@ -37,8 +37,8 @@
       "Category": "Generation",
       "Task": "Program Synthesis",
       "#Languages": "14",
-      "#Test Samples": "802",
-      "Avg. #Tokens/Sample": "494",
+      "#Test Samples": "803",
+      "Avg. #Tokens/Sample": "538",
       "Detail": "leaderboard.html#program-synthesis"
     },
     {
@@ -46,22 +46,22 @@
       "Task": "Code Translation",
       "#Languages": "14",
       "#Test Samples": "5,382",
-      "Avg. #Tokens/Sample": "513",
+      "Avg. #Tokens/Sample": "518",
       "Detail": "leaderboard.html#code-translation"
     },
     {
       "Category": "Generation",
       "Task": "Code Repair",
       "#Languages": "14",
-      "#Test Samples": "743",
-      "Avg. #Tokens/Sample": "447",
+      "#Test Samples": "746",
+      "Avg. #Tokens/Sample": "446",
       "Detail": "leaderboard.html#code-repair"
     },
     {
       "Category": "Generation",
       "Task": "Code Optimization",
       "#Languages": "4",
-      "#Test Samples": "242",
+      "#Test Samples": "121",
       "Avg. #Tokens/Sample": "444",
       "Detail": "leaderboard.html#code-optimization"
     }
