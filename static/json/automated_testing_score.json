@@ -15,7 +15,8 @@
       "c++_pass_rate": "100.0",
       "c++_line_coverage": "98.17",
       "c++_branch_coverage": "94.04",
-      "overall": "96.91"
+      "overall": "96.91",
+      "LAY_CHECKED": true
     },
     {
       "model": "GPT-3.5",
