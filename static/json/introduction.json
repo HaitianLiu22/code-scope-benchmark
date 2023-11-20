@@ -2,68 +2,68 @@
   "code": 0,
   "data": [
     {
-      "Category": "Understanding",
-      "Task": "Code Summarization",
-      "#Languages": "43",
-      "#Test Samples": "4,841",
-      "Avg. #Tokens/Sample": "378",
-      "Detail": "leaderboard.html#code-summarization"
+      "category": "Understanding",
+      "task": "Code Summarization",
+      "languages": "43",
+      "test_samples": "4,841",
+      "average_tokens": "378",
+      "detailed_result": "leaderboard.html#code-summarization"
     },
     {
-      "Category": "Understanding",
-      "Task": "Code Smell",
-      "#Languages": "2",
-      "#Test Samples": "200",
-      "Avg. #Tokens/Sample": "650",
-      "Detail": "leaderboard.html#code-smell"
+      "category": "Understanding",
+      "task": "Code Smell",
+      "languages": "2",
+      "test_samples": "200",
+      "average_tokens": "650",
+      "detailed_result": "leaderboard.html#code-smell"
     },
     {
-      "Category": "Understanding",
-      "Task": "Code Review",
-      "#Languages": "9",
-      "#Test Samples": "900",
-      "Avg. #Tokens/Sample": "857",
-      "Detail": "leaderboard.html#code-review"
+      "category": "Understanding",
+      "task": "Code Review",
+      "languages": "9",
+      "test_samples": "900",
+      "average_tokens": "857",
+      "detailed_result": "leaderboard.html#code-review"
     },
     {
-      "Category": "Understanding",
-      "Task": "Automated Testing",
-      "#Languages": "4",
-      "#Test Samples": "400",
-      "Avg. #Tokens/Sample": "251",
-      "Detail": "leaderboard.html#automated-testing"
+      "category": "Understanding",
+      "task": "Automated Testing",
+      "languages": "4",
+      "test_samples": "400",
+      "average_tokens": "251",
+      "detailed_result": "leaderboard.html#automated-testing"
     },
     {
-      "Category": "Generation",
-      "Task": "Program Synthesis",
-      "#Languages": "14",
-      "#Test Samples": "803",
-      "Avg. #Tokens/Sample": "538",
-      "Detail": "leaderboard.html#program-synthesis"
+      "category": "Generation",
+      "task": "Program Synthesis",
+      "languages": "14",
+      "test_samples": "803",
+      "average_tokens": "538",
+      "detailed_result": "leaderboard.html#program-synthesis"
     },
     {
-      "Category": "Generation",
-      "Task": "Code Translation",
-      "#Languages": "14",
-      "#Test Samples": "5,382",
-      "Avg. #Tokens/Sample": "518",
-      "Detail": "leaderboard.html#code-translation"
+      "category": "Generation",
+      "task": "Code Translation",
+      "languages": "14",
+      "test_samples": "5,382",
+      "average_tokens": "518",
+      "detailed_result": "leaderboard.html#code-translation"
     },
     {
-      "Category": "Generation",
-      "Task": "Code Repair",
-      "#Languages": "14",
-      "#Test Samples": "746",
-      "Avg. #Tokens/Sample": "446",
-      "Detail": "leaderboard.html#code-repair"
+      "category": "Generation",
+      "task": "Code Repair",
+      "languages": "14",
+      "test_samples": "746",
+      "average_tokens": "446",
+      "detailed_result": "leaderboard.html#code-repair"
     },
     {
-      "Category": "Generation",
-      "Task": "Code Optimization",
-      "#Languages": "4",
-      "#Test Samples": "121",
-      "Avg. #Tokens/Sample": "444",
-      "Detail": "leaderboard.html#code-optimization"
+      "category": "Generation",
+      "task": "Code Optimization",
+      "languages": "4",
+      "test_samples": "121",
+      "average_tokens": "444",
+      "detailed_result": "leaderboard.html#code-optimization"
     }
   ]
 }

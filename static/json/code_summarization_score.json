@@ -1,0 +1,69 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "model": "GPT-4",
+      "bleu": "4.75",
+      "meteor": "24.31",
+      "rouge": "20.04",
+      "bertscore": "85.54",
+      "overall": "33.66"
+    },
+    {
+      "model": "GPT-3.5",
+      "bleu": "4.3",
+      "meteor": "22.93",
+      "rouge": "20.0",
+      "bertscore": "85.50",
+      "overall": "33.18"
+    },
+    {
+      "model": "Vicuna",
+      "bleu": "3.34",
+      "meteor": "22.45",
+      "rouge": "18.36",
+      "bertscore": "84.35",
+      "overall": "32.13"
+    },
+    {
+      "model": "WizardCoder",
+      "bleu": "3.18",
+      "meteor": "21.92",
+      "rouge": "19.15",
+      "bertscore": "84.15",
+      "overall": "32.1"
+    },
+    {
+      "model": "Code LLaMA",
+      "bleu": "3.05",
+      "meteor": "21.87",
+      "rouge": "17.86",
+      "bertscore": "83.45",
+      "overall": "31.56"
+    },
+    {
+      "model": "LLaMA 2",
+      "bleu": "2.78",
+      "meteor": "21.83",
+      "rouge": "17.61",
+      "bertscore": "83.74",
+      "overall": "31.49"
+    },
+    {
+      "model": "StarCoder",
+      "bleu": "2.61",
+      "meteor": "20.91",
+      "rouge": "17.02",
+      "bertscore": "84.09",
+      "overall": "31.16"
+    },
+    {
+      "model": "PaLM 2",
+      "bleu": "4.57",
+      "meteor": "16.2",
+      "rouge": "19.08",
+      "bertscore": "80.97",
+      "overall": "30.21"
+    }
+  ]
+}

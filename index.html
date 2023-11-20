@@ -21,7 +21,7 @@
     <div>
         <a class="nav-button" href="#home"><i class="layui-icon layui-icon-home"></i>&nbsp;Home</a>
         <a class="nav-button" href="leaderboard.html"><i class="layui-icon layui-icon-template-1"></i>&nbsp;Leaderboard</a>
-        <a class="nav-button" href="" target="_blank"><i class="layui-icon layui-icon-code-circle"></i>&nbsp;Data</a>
+        <a class="nav-button" href="https://huggingface.co/datasets/WeixiangYan/CodeScope" target="_blank"><i class="layui-icon layui-icon-code-circle"></i>&nbsp;Data</a>
         <a class="nav-button" href="https://arxiv.org/pdf/2311.08588.pdf" target="_blank"><i class="layui-icon layui-icon-file-b"></i>&nbsp;Paper</a>
         <a class="nav-button" href="https://github.com/WeixiangYAN/CodeScope" target="_blank"><i class="layui-icon layui-icon-github"></i>&nbsp;Github</a>
         <a class="nav-button" href="#submission"><i class="layui-icon layui-icon-upload-drag"></i>&nbsp;Submission</a>
@@ -58,17 +58,17 @@
         <table class="layui-table" lay-options="{url:'static/json/introduction.json', skin:'row', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Category', minWidth:130, align:'center'}">Category</th>
-                <th lay-options="{field:'Task', minWidth:170, align:'center'}">Task</th>
-                <th lay-options="{field:'Detail', width:140, templet:'#table-templet-introduction-detail', align:'center'}">Detailed Result</th>
-                <th lay-options="{field:'#Languages', minWidth:130, sort:true, align:'center'}">#Languages</th>
-                <th lay-options="{field:'#Test Samples', minWidth:150, sort:true, align:'center'}">#Test Samples</th>
-                <th lay-options="{field:'Avg. #Tokens/Sample', minWidth:190, sort:true, align:'center'}">Avg. #Tokens/Sample</th>
+                <th lay-options="{field:'category', minWidth:130, align:'center'}">Category</th>
+                <th lay-options="{field:'task', minWidth:170, align:'center'}">Task</th>
+                <th lay-options="{field:'detailed_result', width:140, templet:'#table-templet-introduction-detail', align:'center'}">Detailed Result</th>
+                <th lay-options="{field:'languages', minWidth:130, sort:true, align:'center'}">#Languages</th>
+                <th lay-options="{field:'test_samples', minWidth:150, sort:true, align:'center'}">#Test Samples</th>
+                <th lay-options="{field:'average_tokens', minWidth:190, sort:true, align:'center'}">Avg. #Tokens/Sample</th>
             </tr>
             </thead>
         </table>
         <script type="text/html" id="table-templet-introduction-detail">
-            <a href="{{d.Detail}}" style="text-decoration: none;">
+            <a href="{{d.detailed_result}}" style="text-decoration: none;">
                 <i class="layui-icon layui-icon-release" style="font-size: 18px; color: var(--layui-green);"></i>
             </a>
         </script>
@@ -78,16 +78,17 @@
         <h1>Related Links</h1>
         <br>
         <div class="layui-btn-container">
-            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary layui-border-red" onclick="window.location.href='https://arxiv.org/pdf/2311.08588.pdf'">📃&nbsp;Paper
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary layui-border-red"
+                    onclick="window.location.href='https://arxiv.org/pdf/2311.08588.pdf'">📃&nbsp;Paper
             </button>
-            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary layui-border-purple" onclick="window.location.href='https://github.com/WeixiangYAN/CodeScope'"><i
-                    class="layui-icon layui-icon-github"></i>&nbsp;Github
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary layui-border-purple"
+                    onclick="window.location.href='https://github.com/WeixiangYAN/CodeScope'"><i class="layui-icon layui-icon-github"></i>&nbsp;Github
             </button>
-            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary layui-border-orange" onclick="window.location.href=''">
-                🤗&nbsp;HuggingFace
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary layui-border-orange"
+                    onclick="window.location.href='https://huggingface.co/datasets/WeixiangYan/CodeScope'">🤗&nbsp;HuggingFace
             </button>
             <button type="button" class="layui-btn layui-btn-radius layui-btn-primary layui-border-blue"
-                    onclick="window.location.href=''"><i class="layui-icon layui-icon-chrome"></i>&nbsp;Google Drive
+                    onclick="window.location.href='https://drive.google.com/file/d/1TdwR_RKjgtHhAdDO2Gn2q-fZcBcmmy-j/view'"><i class="layui-icon layui-icon-chrome"></i>&nbsp;Google Drive
             </button>
         </div>
     </div>
@@ -98,22 +99,43 @@
         <table class="layui-table" lay-options="{url:'static/json/leaderboard.json', skin:'row', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Ranking', width:110, sort:true, align:'center'}" rowspan="2">Ranking</th>
-                <th lay-options="{field:'Model', width:150, templet:'#table-templet-leaderboard-model', align:'center'}" rowspan="2">Model</th>
-                <th lay-options="{field:'Organization', width:150, align:'center'}" rowspan="2">Organization</th>
-                <th lay-options="{minWidth:160, align:'center'}" colspan="1">LLMCodeEval&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                <th lay-options="{minWidth:160, align:'center'}" colspan="1">LLMCodeEval&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                <th lay-options="{minWidth:160, align:'center'}" colspan="1">LLMCodeEval&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th lay-options="{field:'ranking', width:110, sort:true, align:'center'}" rowspan="2">Ranking</th>
+                <th lay-options="{field:'model', templet:'#table-templet-leaderboard-model', width:150, align:'center'}" rowspan="2">Model</th>
+                <th lay-options="{field:'organization', width:150, align:'center'}" rowspan="2">Organization</th>
+                <th lay-options="{minWidth:160, align:'center'}" colspan="1">CodeScope&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th lay-options="{minWidth:160, align:'center'}" colspan="1">CodeScope&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th lay-options="{minWidth:160, align:'center'}" colspan="1">CodeScope&nbsp;&nbsp;&nbsp;&nbsp;</th>
             </tr>
             <tr>
-                <th lay-data="{field:'LLMCodeEval (Understanding)', minWidth:160, sort:true, align:'center'}">(Understanding)</th>
-                <th lay-data="{field:'LLMCodeEval (Generation)', minWidth:160, sort:true, align:'center'}">(Generation)</th>
-                <th lay-data="{field:'LLMCodeEval (Overall)', minWidth:160, sort:true, align:'center'}">(Overall)</th>
+                <th lay-data="{field:'understanding', templet:'#table-templet-leaderboard-understanding', minWidth:160, sort:true, align:'center'}">(Understanding)</th>
+                <th lay-data="{field:'generation', templet:'#table-templet-leaderboard-generation', minWidth:160, sort:true, align:'center'}">(Generation)</th>
+                <th lay-data="{field:'overall', templet:'#table-templet-leaderboard-overall', minWidth:160, sort:true, align:'center'}">(Overall)</th>
             </tr>
             </thead>
         </table>
         <script type="text/html" id="table-templet-leaderboard-model">
-            <a href="{{d.Link}}" style="font-size: 14px; color: var(--layui-green);">{{d.Model}}</a>
+            <a href="{{d.link}}" style="font-size: 14px; color: var(--layui-green);">{{d.model}}</a>
+        </script>
+        <script type="text/html" id="table-templet-leaderboard-understanding">
+            {{# if(d.model === "WizardCoder") { }}
+            <b>{{d.understanding}}</b>
+            {{# } else { }}
+            {{d.understanding}}
+            {{# } }}
+        </script>
+        <script type="text/html" id="table-templet-leaderboard-generation">
+            {{# if(d.model === "GPT-4") { }}
+            <b>{{d.generation}}</b>
+            {{# } else { }}
+            {{d.generation}}
+            {{# } }}
+        </script>
+        <script type="text/html" id="table-templet-leaderboard-overall">
+            {{# if(d.model === "GPT-4") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
         </script>
     </div>
 

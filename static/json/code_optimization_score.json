@@ -1,0 +1,101 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "model": "GPT-4",
+      "python_memory": "46.67",
+      "python_time": "36.67",
+      "c_memory": "43.33",
+      "c_time": "6.67",
+      "c++_memory": "29.04",
+      "c++_time": "3.23",
+      "c#_memory": "36.67",
+      "c#_time": "23.33",
+      "overall": "28.2"
+    },
+    {
+      "model": "GPT-3.5",
+      "python_memory": "40.0",
+      "python_time": "20.0",
+      "c_memory": "76.67",
+      "c_time": "6.67",
+      "c++_memory": "29.03",
+      "c++_time": "19.35",
+      "c#_memory": "0.0",
+      "c#_time": "20.0",
+      "overall": "26.46"
+    },
+    {
+      "model": "WizardCoder",
+      "python_memory": "50.0",
+      "python_time": "16.67",
+      "c_memory": "50.0",
+      "c_time": "0.0",
+      "c++_memory": "38.71",
+      "c++_time": "12.90",
+      "c#_memory": "10.0",
+      "c#_time": "16.67",
+      "overall": "24.37"
+    },
+    {
+      "model": "Code LLaMA",
+      "python_memory": "43.33",
+      "python_time": "13.33",
+      "c_memory": "40.0",
+      "c_time": "0.0",
+      "c++_memory": "35.48",
+      "c++_time": "3.22",
+      "c#_memory": "10.0",
+      "c#_time": "23.33",
+      "overall": "21.09"
+    },
+    {
+      "model": "PaLM 2",
+      "python_memory": "20.0",
+      "python_time": "13.33",
+      "c_memory": "20.0",
+      "c_time": "0.0",
+      "c++_memory": "6.45",
+      "c++_time": "6.45",
+      "c#_memory": "0.0",
+      "c#_time": "6.67",
+      "overall": "9.11"
+    },
+    {
+      "model": "StarCoder",
+      "python_memory": "20.0",
+      "python_time": "6.67",
+      "c_memory": "13.33",
+      "c_time": "0.0",
+      "c++_memory": "16.13",
+      "c++_time": "0.0",
+      "c#_memory": "3.33",
+      "c#_time": "6.67",
+      "overall": "8.27"
+    },
+    {
+      "model": "LLaMA 2",
+      "python_memory": "16.67",
+      "python_time": "3.33",
+      "c_memory": "16.67",
+      "c_time": "6.67",
+      "c++_memory": "6.45",
+      "c++_time": "0.0",
+      "c#_memory": "6.67",
+      "c#_time": "0.0",
+      "overall": "7.06"
+    },
+    {
+      "model": "Vicuna",
+      "python_memory": "20.0",
+      "python_time": "6.67",
+      "c_memory": "13.33",
+      "c_time": "0.0",
+      "c++_memory": "6.45",
+      "c++_time": "0.0",
+      "c#_memory": "0.0",
+      "c#_time": "6.67",
+      "overall": "6.64"
+    }
+  ]
+}

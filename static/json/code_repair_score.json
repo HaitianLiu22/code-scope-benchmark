@@ -1,0 +1,53 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "model": "GPT-4",
+      "easy": "43.56",
+      "hard": "14.04",
+      "overall": "30.03"
+    },
+    {
+      "model": "GPT-3.5",
+      "easy": "18.56",
+      "hard": "7.6",
+      "overall": "13.54"
+    },
+    {
+      "model": "PaLM 2",
+      "easy": "7.43",
+      "hard": "7.02",
+      "overall": "7.24"
+    },
+    {
+      "model": "WizardCoder",
+      "easy": "4.95",
+      "hard": "5.56",
+      "overall": "5.23"
+    },
+    {
+      "model": "Code LLaMA",
+      "easy": "4.21",
+      "hard": "3.51",
+      "overall": "3.89"
+    },
+    {
+      "model": "Vicuna",
+      "easy": "3.47",
+      "hard": "2.34",
+      "overall": "2.95"
+    },
+    {
+      "model": "StarCoder",
+      "easy": "2.23",
+      "hard": "3.51",
+      "overall": "2.82"
+    },
+    {
+      "model": "LLaMA 2",
+      "easy": "1.49",
+      "hard": "1.46",
+      "overall": "1.47"
+    }
+  ]
+}

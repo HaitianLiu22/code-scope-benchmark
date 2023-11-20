@@ -21,7 +21,7 @@
     <div>
         <a class="nav-button" href="index.html#home"><i class="layui-icon layui-icon-home"></i>&nbsp;Home</a>
         <a class="nav-button" href="leaderboard.html"><i class="layui-icon layui-icon-template-1"></i>&nbsp;Leaderboard</a>
-        <a class="nav-button" href="" target="_blank"><i class="layui-icon layui-icon-code-circle"></i>&nbsp;Data</a>
+        <a class="nav-button" href="https://huggingface.co/datasets/WeixiangYan/CodeScope" target="_blank"><i class="layui-icon layui-icon-code-circle"></i>&nbsp;Data</a>
         <a class="nav-button" href="https://arxiv.org/pdf/2311.08588.pdf" target="_blank"><i class="layui-icon layui-icon-file-b"></i>&nbsp;Paper</a>
         <a class="nav-button" href="https://github.com/WeixiangYAN/CodeScope" target="_blank"><i class="layui-icon layui-icon-github"></i>&nbsp;Github</a>
         <a class="nav-button" href="index.html#submission"><i class="layui-icon layui-icon-upload-drag"></i>&nbsp;Submission</a>
@@ -39,94 +39,205 @@
     <div class="section" id="code-summarization">
         <h2>Code Summarization</h2>
         <br>
-        <table class="layui-table" lay-options="{url:'static/json/code_summarization.json', skin:'line', even:true}">
+        <table class="layui-table" lay-options="{url:'static/json/code_summarization_score.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
-                <th lay-options="{field:'BLEU', minWidth:100, sort:true, align:'center'}">BLEU</th>
-                <th lay-options="{field:'METEOR', minWidth:110, sort:true, align:'center'}">METEOR</th>
-                <th lay-options="{field:'ROUGE', minWidth:100, sort:true, align:'center'}">ROUGE</th>
-                <th lay-options="{field:'BERTScore', minWidth:120, sort:true, align:'center'}">BERTScore</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-options="{field:'meteor', minWidth:110, sort:true, align:'center'}">METEOR</th>
+                <th lay-options="{field:'rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-options="{field:'bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-summarization-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
             </tr>
             </thead>
         </table>
+        <script type="text/html" id="table-templet-code-summarization-overall">
+            {{# if(d.model === "GPT-4") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <div class="section" id="code-smell">
         <h2>Code Smell</h2>
         <br>
-        <table class="layui-table" lay-data="{url:'static/json/code_smell.json', skin:'line', even:true}">
+        <table class="layui-table" lay-data="{url:'static/json/code_smell_score.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}" rowspan="2">Model</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="2">Model</th>
                 <th lay-data="{align:'center'}" colspan="4">Java</th>
                 <th lay-data="{align:'center'}" colspan="4">C#</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-smell-overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
             </tr>
             <tr>
-                <th lay-data="{field:'Java Accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
-                <th lay-data="{field:'Java Precision', minWidth:110, sort:true, align:'center'}">Precision</th>
-                <th lay-data="{field:'Java Recall', minWidth:100, sort:true, align:'center'}">Recall</th>
-                <th lay-data="{field:'Java F1-score', minWidth:110, sort:true, align:'center'}">F1-score</th>
-                <th lay-data="{field:'C# Accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
-                <th lay-data="{field:'C# Precision', minWidth:110, sort:true, align:'center'}">Precision</th>
-                <th lay-data="{field:'C# Recall', minWidth:100, sort:true, align:'center'}">Recall</th>
-                <th lay-data="{field:'C# F1-score', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'java_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
             </tr>
             </thead>
         </table>
+        <script type="text/html" id="table-templet-code-smell-overall">
+            {{# if(d.model === "WizardCoder") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <div class="section" id="code-review">
         <h2>Code Review</h2>
         <br>
-        <table class="layui-table" lay-options="{url:'static/json/code_review.json', skin:'line', even:true}">
+        <table class="layui-table" lay-options="{url:'static/json/code_review_score_1.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
-                <th lay-options="{field:'Accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
-                <th lay-options="{field:'Precision', minWidth:110, sort:true, align:'center'}">Precision</th>
-                <th lay-options="{field:'Recall', minWidth:100, sort:true, align:'center'}">Recall</th>
-                <th lay-options="{field:'F1-score', minWidth:110, sort:true, align:'center'}">F1-score</th>
-                <th lay-options="{field:'BLEU', minWidth:100, sort:true, align:'center'}">BLEU</th>
-                <th lay-options="{field:'ROUGE', minWidth:100, sort:true, align:'center'}">ROUGE</th>
-                <th lay-options="{field:'BERTScore', minWidth:120, sort:true, align:'center'}">BERTScore</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-options="{field:'precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-options="{field:'recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-options="{field:'f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-options="{field:'bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-options="{field:'rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-options="{field:'bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-review-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
             </tr>
             </thead>
         </table>
+        <br><br>
+        <table class="layui-table" lay-data="{url:'static/json/code_review_score_2.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="2">Model</th>
+                <th lay-data="{align:'center'}" colspan="7">C</th>
+                <th lay-data="{align:'center'}" colspan="7">C#</th>
+                <th lay-data="{align:'center'}" colspan="7">C++</th>
+                <th lay-data="{align:'center'}" colspan="7">Go</th>
+                <th lay-data="{align:'center'}" colspan="7">Java</th>
+                <th lay-data="{align:'center'}" colspan="7">JavaScript</th>
+                <th lay-data="{align:'center'}" colspan="7">PHP</th>
+                <th lay-data="{align:'center'}" colspan="7">Python</th>
+                <th lay-data="{align:'center'}" colspan="7">Ruby</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-review-overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'c_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c#_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c#_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c#_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c++_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c++_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c++_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c++_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c++_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c++_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c++_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'go_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'go_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'go_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'go_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'go_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'go_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'go_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'java_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'java_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'java_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'java_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'javascript_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'javascript_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'javascript_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'javascript_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'javascript_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'javascript_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'javascript_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'php_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'php_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'php_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'php_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'php_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'php_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'php_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'python_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'python_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'python_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'python_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'python_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'python_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'python_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'ruby_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'ruby_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'ruby_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'ruby_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'ruby_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'ruby_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'ruby_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+            </tr>
+            </thead>
+        </table>
+        <script type="text/html" id="table-templet-code-review-overall">
+            {{# if(d.model === "Code LLaMA") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <div class="section" id="automated-testing">
         <h2>Automated Testing</h2>
         <br>
-        <table class="layui-table" lay-data="{url:'static/json/automated_testing.json', skin:'line', even:true}">
+        <table class="layui-table" lay-data="{url:'static/json/automated_testing_score.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}" rowspan="2">Model</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="2">Model</th>
                 <th lay-data="{align:'center'}" colspan="3">Python</th>
                 <th lay-data="{align:'center'}" colspan="3">Java</th>
                 <th lay-data="{align:'center'}" colspan="3">C</th>
                 <th lay-data="{align:'center'}" colspan="3">C++</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-automated-testing-overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
             </tr>
             <tr>
-                <th lay-data="{field:'Python PR', minWidth:80, sort:true, align:'center'}">PR</th>
-                <th lay-data="{field:'Python LC', minWidth:80, sort:true, align:'center'}">LC</th>
-                <th lay-data="{field:'Python BC', minWidth:80, sort:true, align:'center'}">BC</th>
-                <th lay-data="{field:'Java PR', minWidth:80, sort:true, align:'center'}">PR</th>
-                <th lay-data="{field:'Java LC', minWidth:80, sort:true, align:'center'}">LC</th>
-                <th lay-data="{field:'Java BC', minWidth:80, sort:true, align:'center'}">BC</th>
-                <th lay-data="{field:'C PR', minWidth:80, sort:true, align:'center'}">PR</th>
-                <th lay-data="{field:'C LC', minWidth:80, sort:true, align:'center'}">LC</th>
-                <th lay-data="{field:'C BC', minWidth:80, sort:true, align:'center'}">BC</th>
-                <th lay-data="{field:'C++ PR', minWidth:80, sort:true, align:'center'}">PR</th>
-                <th lay-data="{field:'C++ LC', minWidth:80, sort:true, align:'center'}">LC</th>
-                <th lay-data="{field:'C++ BC', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'python_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'python_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'python_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'java_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'java_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'java_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c++_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c++_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c++_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
             </tr>
             </thead>
         </table>
+        <script type="text/html" id="table-templet-automated-testing-overall">
+            {{# if(d.model === "GPT-3.5") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <div class="section" id="code-generation">
@@ -136,73 +247,101 @@
     <div class="section" id="program-synthesis">
         <h2>Program Synthesis</h2>
         <br>
-        <table class="layui-table" lay-options="{url:'static/json/program_synthesis.json', skin:'line', even:true}">
+        <table class="layui-table" lay-options="{url:'static/json/program_synthesis_score.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
-                <th lay-options="{field:'Easy', minWidth:100, sort:true, align:'center'}">Easy</th>
-                <th lay-options="{field:'Hard', minWidth:100, sort:true, align:'center'}">Hard</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'easy', minWidth:100, sort:true, align:'center'}">Easy</th>
+                <th lay-options="{field:'hard', minWidth:100, sort:true, align:'center'}">Hard</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-program-synthesis-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
             </tr>
             </thead>
         </table>
+        <script type="text/html" id="table-templet-program-synthesis-overall">
+            {{# if(d.model === "GPT-4") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <div class="section" id="code-translation">
         <h2>Code Translation</h2>
         <br>
-        <table class="layui-table" lay-options="{url:'static/json/code_translation.json', skin:'line', even:true}">
+        <table class="layui-table" lay-options="{url:'static/json/code_translation_score.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
-                <th lay-options="{field:'Easy', minWidth:100, sort:true, align:'center'}">Easy</th>
-                <th lay-options="{field:'Hard', minWidth:100, sort:true, align:'center'}">Hard</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'easy', minWidth:100, sort:true, align:'center'}">Easy</th>
+                <th lay-options="{field:'hard', minWidth:100, sort:true, align:'center'}">Hard</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-translation-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
             </tr>
             </thead>
         </table>
+        <script type="text/html" id="table-templet-code-translation-overall">
+            {{# if(d.model === "GPT-4") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <div class="section" id="code-repair">
         <h2>Code Repair</h2>
         <br>
-        <table class="layui-table" lay-options="{url:'static/json/code_repair.json', skin:'line', even:true}">
+        <table class="layui-table" lay-options="{url:'static/json/code_repair_score.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}">Model</th>
-                <th lay-options="{field:'Easy', minWidth:100, sort:true, align:'center'}">Easy</th>
-                <th lay-options="{field:'Hard', minWidth:100, sort:true, align:'center'}">Hard</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'easy', minWidth:100, sort:true, align:'center'}">Easy</th>
+                <th lay-options="{field:'hard', minWidth:100, sort:true, align:'center'}">Hard</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-repair-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
             </tr>
             </thead>
         </table>
+        <script type="text/html" id="table-templet-code-repair-overall">
+            {{# if(d.model === "GPT-4") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <div class="section" id="code-optimization">
         <h2>Code Optimization</h2>
         <br>
-        <table class="layui-table" lay-data="{url:'static/json/code_optimization.json', skin:'line', even:true}">
+        <table class="layui-table" lay-data="{url:'static/json/code_optimization_score.json', skin:'line', even:true}">
             <thead>
             <tr>
-                <th lay-options="{field:'Model', minWidth:120, align:'center'}" rowspan="2">Model</th>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="2">Model</th>
                 <th lay-data="{align:'center'}" colspan="2">Python</th>
                 <th lay-data="{align:'center'}" colspan="2">C</th>
                 <th lay-data="{align:'center'}" colspan="2">C++</th>
                 <th lay-data="{align:'center'}" colspan="2">C#</th>
-                <th lay-options="{field:'Overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-optimization-overall', minWidth:100, sort:true, align:'center'}" rowspan="2">Overall</th>
             </tr>
             <tr>
-                <th lay-data="{field:'Python Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
-                <th lay-data="{field:'Python Time', minWidth:80, sort:true, align:'center'}">Time</th>
-                <th lay-data="{field:'C Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
-                <th lay-data="{field:'C Time', minWidth:80, sort:true, align:'center'}">Time</th>
-                <th lay-data="{field:'C++ Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
-                <th lay-data="{field:'C++ Time', minWidth:80, sort:true, align:'center'}">Time</th>
-                <th lay-data="{field:'C# Memory', minWidth:100, sort:true, align:'center'}">Memory</th>
-                <th lay-data="{field:'C# Time', minWidth:80, sort:true, align:'center'}">Time</th>
+                <th lay-data="{field:'python_memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'python_time', minWidth:80, sort:true, align:'center'}">Time</th>
+                <th lay-data="{field:'c_memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'c_time', minWidth:80, sort:true, align:'center'}">Time</th>
+                <th lay-data="{field:'c++_memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'c++_time', minWidth:80, sort:true, align:'center'}">Time</th>
+                <th lay-data="{field:'c#_memory', minWidth:100, sort:true, align:'center'}">Memory</th>
+                <th lay-data="{field:'c#_time', minWidth:80, sort:true, align:'center'}">Time</th>
             </tr>
             </thead>
         </table>
+        <script type="text/html" id="table-templet-code-optimization-overall">
+            {{# if(d.model === "GPT-4") { }}
+            <b>{{d.overall}}</b>
+            {{# } else { }}
+            {{d.overall}}
+            {{# } }}
+        </script>
     </div>
 
     <br><br><br><br><br>

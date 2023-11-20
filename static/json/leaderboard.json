@@ -2,76 +2,76 @@
   "code": 0,
   "data": [
     {
-      "Ranking": "1",
-      "Model": "GPT-4",
-      "Organization": "OpenAI",
-      "Link": "https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo",
-      "LLMCodeEval (Understanding)": "46.93",
-      "LLMCodeEval (Generation)": "31.23",
-      "LLMCodeEval (Overall)": "39.08"
+      "ranking": "1",
+      "model": "GPT-4",
+      "organization": "OpenAI",
+      "link": "https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo",
+      "understanding": "46.93",
+      "generation": "31.47",
+      "overall": "39.2"
     },
     {
-      "Ranking": "2",
-      "Model": "GPT-3.5",
-      "Organization": "OpenAI",
-      "Link": "https://platform.openai.com/docs/models/gpt-3-5",
-      "LLMCodeEval (Understanding)": "49.20",
-      "LLMCodeEval (Generation)": "20.89",
-      "LLMCodeEval (Overall)": "35.05"
+      "ranking": "2",
+      "model": "GPT-3.5",
+      "organization": "OpenAI",
+      "link": "https://platform.openai.com/docs/models/gpt-3-5",
+      "understanding": "49.2",
+      "generation": "21.07",
+      "overall": "35.14"
     },
     {
-      "Ranking": "3",
-      "Model": "WizardCoder",
-      "Organization": "Microsoft",
-      "Link": "https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder",
-      "LLMCodeEval (Understanding)": "50.00",
-      "LLMCodeEval (Generation)": "9.70",
-      "LLMCodeEval (Overall)": "29.85"
+      "ranking": "3",
+      "model": "WizardCoder",
+      "organization": "Microsoft",
+      "link": "https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder",
+      "understanding": "50.0",
+      "generation": "9.73",
+      "overall": "29.86"
     },
     {
-      "Ranking": "4",
-      "Model": "Code LLaMA",
-      "Organization": "Meta",
-      "Link": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
-      "LLMCodeEval (Understanding)": "47.99",
-      "LLMCodeEval (Generation)": "8.00",
-      "LLMCodeEval (Overall)": "28.00"
+      "ranking": "4",
+      "model": "Code LLaMA",
+      "organization": "Meta",
+      "link": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+      "understanding": "47.99",
+      "generation": "8.04",
+      "overall": "28.01"
     },
     {
-      "Ranking": "5",
-      "Model": "PaLM 2",
-      "Organization": "Google",
-      "Link": "https://ai.google/discover/palm2",
-      "LLMCodeEval (Understanding)": "47.28",
-      "LLMCodeEval (Generation)": "5.55",
-      "LLMCodeEval (Overall)": "26.42"
+      "ranking": "5",
+      "model": "PaLM 2",
+      "organization": "Google",
+      "link": "https://ai.google/discover/palm2",
+      "understanding": "47.28",
+      "generation": "5.46",
+      "overall": "26.37"
     },
     {
-      "Ranking": "6",
-      "Model": "LLaMA 2",
-      "Organization": "Meta",
-      "Link": "https://ai.meta.com/llama/",
-      "LLMCodeEval (Understanding)": "48.51",
-      "LLMCodeEval (Generation)": "2.49",
-      "LLMCodeEval (Overall)": "25.50"
+      "ranking": "6",
+      "model": "LLaMA 2",
+      "organization": "Meta",
+      "link": "https://ai.meta.com/llama/",
+      "understanding": "48.51",
+      "generation": "2.49",
+      "overall": "25.5"
     },
     {
-      "Ranking": "7",
-      "Model": "Vicuna",
-      "Organization": "Vicuna Team",
-      "Link": "https://lmsys.org/blog/2023-03-30-vicuna/",
-      "LLMCodeEval (Understanding)": "46.54",
-      "LLMCodeEval (Generation)": "2.59",
-      "LLMCodeEval (Overall)": "24.57"
+      "ranking": "7",
+      "model": "Vicuna",
+      "organization": "Vicuna Team",
+      "link": "https://lmsys.org/blog/2023-03-30-vicuna/",
+      "understanding": "46.54",
+      "generation": "2.59",
+      "overall": "24.57"
     },
     {
-      "Ranking": "8",
-      "Model": "StarCoder",
-      "Organization": "BigCode",
-      "Link": "https://github.com/bigcode-project/starcoder",
-      "LLMCodeEval (Understanding)": "44.04",
-      "LLMCodeEval (Generation)": "3.86",
-      "LLMCodeEval (Overall)": "23.95"
+      "ranking": "8",
+      "model": "StarCoder",
+      "organization": "BigCode",
+      "link": "https://github.com/bigcode-project/starcoder",
+      "understanding": "44.04",
+      "generation": "3.86",
+      "overall": "23.95"
     }
   ]
 }
