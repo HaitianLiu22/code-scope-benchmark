@@ -63,6 +63,63 @@
     <div class="section" id="code-smell">
         <h2>Code Smell</h2>
         <br>
+        <table class="layui-table" lay-options="{url:'static/json/code_smell_score_1.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'short', minWidth:100, sort:true, align:'center'}">Short</th>
+                <th lay-options="{field:'medium', minWidth:100, sort:true, align:'center'}">Medium</th>
+                <th lay-options="{field:'long', minWidth:100, sort:true, align:'center'}">Long</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-smell-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+        <br>
+        <table class="layui-table" lay-data="{url:'static/json/code_smell_score_2.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="3">Model</th>
+                <th lay-data="{align:'center'}" colspan="12">Java</th>
+                <th lay-data="{align:'center'}" colspan="12">C#</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-smell-overall', minWidth:100, sort:true, align:'center'}" rowspan="3">Overall</th>
+            </tr>
+            <tr>
+                <th lay-data="{align:'center'}" colspan="4">Short</th>
+                <th lay-data="{align:'center'}" colspan="4">Medium</th>
+                <th lay-data="{align:'center'}" colspan="4">Long</th>
+                <th lay-data="{align:'center'}" colspan="4">Short</th>
+                <th lay-data="{align:'center'}" colspan="4">Medium</th>
+                <th lay-data="{align:'center'}" colspan="4">Long</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'java_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'java_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'java_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+            </tr>
+            </thead>
+        </table>
+        <!--<br>
         <table class="layui-table" lay-data="{url:'static/json/code_smell_score.json', skin:'line', even:true}">
             <thead>
             <tr>
@@ -82,7 +139,7 @@
                 <th lay-data="{field:'c#_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
             </tr>
             </thead>
-        </table>
+        </table>-->
         <script type="text/html" id="table-templet-code-smell-overall">
             {{# if(d.model === "WizardCoder") { }}
             <b>{{d.overall}}</b>
@@ -99,6 +156,256 @@
             <thead>
             <tr>
                 <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'short', minWidth:100, sort:true, align:'center'}">Short</th>
+                <th lay-options="{field:'medium', minWidth:100, sort:true, align:'center'}">Medium</th>
+                <th lay-options="{field:'long', minWidth:100, sort:true, align:'center'}">Long</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-review-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+        <br>
+        <table class="layui-table" lay-data="{url:'static/json/code_review_score_2.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="3">Model</th>
+                <th lay-data="{align:'center'}" colspan="21">C</th>
+                <th lay-data="{align:'center'}" colspan="21">C#</th>
+                <th lay-data="{align:'center'}" colspan="21">C++</th>
+                <th lay-data="{align:'center'}" colspan="21">Go</th>
+                <th lay-data="{align:'center'}" colspan="21">Java</th>
+                <th lay-data="{align:'center'}" colspan="21">JavaScript</th>
+                <th lay-data="{align:'center'}" colspan="21">PHP</th>
+                <th lay-data="{align:'center'}" colspan="21">Python</th>
+                <th lay-data="{align:'center'}" colspan="21">Ruby</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-code-review-overall', minWidth:100, sort:true, align:'center'}" rowspan="3">Overall</th>
+            </tr>
+            <tr>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+                <th lay-data="{align:'center'}" colspan="7">Short</th>
+                <th lay-data="{align:'center'}" colspan="7">Medium</th>
+                <th lay-data="{align:'center'}" colspan="7">Long</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'c_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c#_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c#_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c#_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c#_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c#_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c#_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c#_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c#_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c#_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c#_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c#_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c#_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c#_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c++_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c++_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c++_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c++_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c++_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c++_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c++_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c++_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c++_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c++_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c++_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c++_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c++_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c++_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'c++_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'c++_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'c++_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'c++_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'c++_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'c++_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'c++_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'go_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'go_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'go_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'go_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'go_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'go_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'go_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'go_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'go_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'go_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'go_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'go_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'go_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'go_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'go_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'go_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'go_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'go_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'go_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'go_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'go_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'java_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'java_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'java_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'java_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'java_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'java_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'java_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'java_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'java_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'java_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'java_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'java_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'java_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'java_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'java_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'javascript_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'javascript_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'javascript_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'javascript_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'javascript_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'javascript_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'javascript_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'javascript_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'javascript_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'javascript_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'javascript_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'javascript_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'javascript_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'javascript_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'javascript_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'javascript_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'javascript_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'javascript_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'javascript_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'javascript_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'javascript_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'php_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'php_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'php_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'php_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'php_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'php_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'php_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'php_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'php_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'php_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'php_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'php_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'php_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'php_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'php_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'php_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'php_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'php_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'php_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'php_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'php_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'python_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'python_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'python_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'python_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'python_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'python_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'python_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'python_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'python_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'python_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'python_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'python_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'python_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'python_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'python_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'python_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'python_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'python_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'python_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'python_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'python_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'ruby_short_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'ruby_short_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'ruby_short_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'ruby_short_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'ruby_short_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'ruby_short_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'ruby_short_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'ruby_medium_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'ruby_medium_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'ruby_medium_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'ruby_medium_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'ruby_medium_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'ruby_medium_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'ruby_medium_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+                <th lay-data="{field:'ruby_long_accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
+                <th lay-data="{field:'ruby_long_precision', minWidth:110, sort:true, align:'center'}">Precision</th>
+                <th lay-data="{field:'ruby_long_recall', minWidth:100, sort:true, align:'center'}">Recall</th>
+                <th lay-data="{field:'ruby_long_f1', minWidth:110, sort:true, align:'center'}">F1-score</th>
+                <th lay-data="{field:'ruby_long_bleu', minWidth:100, sort:true, align:'center'}">BLEU</th>
+                <th lay-data="{field:'ruby_long_rouge', minWidth:100, sort:true, align:'center'}">ROUGE</th>
+                <th lay-data="{field:'ruby_long_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
+            </tr>
+            </thead>
+        </table>
+        <!--<br>
+        <table class="layui-table" lay-options="{url:'static/json/code_review_score_3.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
                 <th lay-options="{field:'accuracy', minWidth:110, sort:true, align:'center'}">Accuracy</th>
                 <th lay-options="{field:'precision', minWidth:110, sort:true, align:'center'}">Precision</th>
                 <th lay-options="{field:'recall', minWidth:100, sort:true, align:'center'}">Recall</th>
@@ -111,7 +418,7 @@
             </thead>
         </table>
         <br><br>
-        <table class="layui-table" lay-data="{url:'static/json/code_review_score_2.json', skin:'line', even:true}">
+        <table class="layui-table" lay-data="{url:'static/json/code_review_score_4.json', skin:'line', even:true}">
             <thead>
             <tr>
                 <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="2">Model</th>
@@ -192,7 +499,7 @@
                 <th lay-data="{field:'ruby_bertscore', minWidth:130, sort:true, align:'center'}">BERTScore</th>
             </tr>
             </thead>
-        </table>
+        </table>-->
         <script type="text/html" id="table-templet-code-review-overall">
             {{# if(d.model === "Code LLaMA") { }}
             <b>{{d.overall}}</b>
@@ -205,6 +512,83 @@
     <div class="section" id="automated-testing">
         <h2>Automated Testing</h2>
         <br>
+        <table class="layui-table" lay-options="{url:'static/json/automated_testing_score_1.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}">Model</th>
+                <th lay-options="{field:'short', minWidth:100, sort:true, align:'center'}">Short</th>
+                <th lay-options="{field:'medium', minWidth:100, sort:true, align:'center'}">Medium</th>
+                <th lay-options="{field:'long', minWidth:100, sort:true, align:'center'}">Long</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-automated-testing-overall', minWidth:100, sort:true, align:'center'}">Overall</th>
+            </tr>
+            </thead>
+        </table>
+        <br>
+        <table class="layui-table" lay-data="{url:'static/json/automated_testing_score_2.json', skin:'line', even:true}">
+            <thead>
+            <tr>
+                <th lay-options="{field:'model', minWidth:120, align:'center'}" rowspan="3">Model</th>
+                <th lay-data="{align:'center'}" colspan="9">Python</th>
+                <th lay-data="{align:'center'}" colspan="9">Java</th>
+                <th lay-data="{align:'center'}" colspan="9">C</th>
+                <th lay-data="{align:'center'}" colspan="9">C++</th>
+                <th lay-options="{field:'overall', templet:'#table-templet-automated-testing-overall', minWidth:100, sort:true, align:'center'}" rowspan="3">Overall</th>
+            </tr>
+            <tr>
+                <th lay-data="{align:'center'}" colspan="3">Short</th>
+                <th lay-data="{align:'center'}" colspan="3">Medium</th>
+                <th lay-data="{align:'center'}" colspan="3">Long</th>
+                <th lay-data="{align:'center'}" colspan="3">Short</th>
+                <th lay-data="{align:'center'}" colspan="3">Medium</th>
+                <th lay-data="{align:'center'}" colspan="3">Long</th>
+                <th lay-data="{align:'center'}" colspan="3">Short</th>
+                <th lay-data="{align:'center'}" colspan="3">Medium</th>
+                <th lay-data="{align:'center'}" colspan="3">Long</th>
+                <th lay-data="{align:'center'}" colspan="3">Short</th>
+                <th lay-data="{align:'center'}" colspan="3">Medium</th>
+                <th lay-data="{align:'center'}" colspan="3">Long</th>
+            </tr>
+            <tr>
+                <th lay-data="{field:'python_short_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'python_short_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'python_short_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'python_medium_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'python_medium_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'python_medium_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'python_long_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'python_long_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'python_long_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'java_short_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'java_short_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'java_short_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'java_medium_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'java_medium_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'java_medium_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'java_long_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'java_long_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'java_long_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c_short_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c_short_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c_short_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c_medium_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c_medium_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c_medium_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c_long_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c_long_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c_long_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c++_short_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c++_short_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c++_short_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c++_medium_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c++_medium_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c++_medium_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+                <th lay-data="{field:'c++_long_pass_rate', minWidth:80, sort:true, align:'center'}">PR</th>
+                <th lay-data="{field:'c++_long_line_coverage', minWidth:80, sort:true, align:'center'}">LC</th>
+                <th lay-data="{field:'c++_long_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
+            </tr>
+            </thead>
+        </table>
+        <!--<br>
         <table class="layui-table" lay-data="{url:'static/json/automated_testing_score.json', skin:'line', even:true}">
             <thead>
             <tr>
@@ -230,7 +614,7 @@
                 <th lay-data="{field:'c++_branch_coverage', minWidth:80, sort:true, align:'center'}">BC</th>
             </tr>
             </thead>
-        </table>
+        </table>-->
         <script type="text/html" id="table-templet-automated-testing-overall">
             {{# if(d.model === "GPT-3.5") { }}
             <b>{{d.overall}}</b>
